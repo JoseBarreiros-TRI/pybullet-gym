@@ -3,6 +3,13 @@ from gym.envs.registration import register
 # roboschool envs
 ## pendula
 register(
+	id='KukaReachEnv-v0',
+	entry_point='pybulletgym.envs.kuka_reach.kukaReachEnv:KukaReachEnv',
+	max_episode_steps=1000,
+	reward_threshold=950.0,
+	)
+
+register(
 	id='InvertedPendulumPyBulletEnv-v0',
 	entry_point='pybulletgym.envs.roboschool.envs.pendulum.inverted_pendulum_env:InvertedPendulumBulletEnv',
 	max_episode_steps=1000,
